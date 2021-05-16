@@ -1,23 +1,21 @@
+/*const ADMIN = 0;
+const READ_ONLY = 1;
+const author = 2;
+*/
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
+;
 var person = {
     name: 'JuanSbonora',
     age: 30,
     hobbies: ['Sports', 'Cooking'],
-    role: [2, 'admin']
+    role: Role.ADMIN
 };
-var favoriteActivities;
-favoriteActivities = ['Karate'];
-console.log(person, favoriteActivities);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobbies = _a[_i];
-    console.log(hobbies.toUpperCase());
+console.log(person);
+if (person.role === Role.ADMIN) {
+    console.log('is Admin');
 }
-/*const product = {
-    id: '001',
-    price: 7.0,
-    tags: ['great-offter','hot-and-new'],
-    details:{
-        title: 'Red Carpet',
-        description: 'A great carpet - almost brand-new!'
-    }
-}
-console.log(person,product)*/

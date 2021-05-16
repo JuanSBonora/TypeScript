@@ -1,30 +1,17 @@
-const person: {
-    name: string;
-    age: number;
-    hobbies: string[];
-    role: [number,string];
-} = {
+/*const ADMIN = 0;
+const READ_ONLY = 1;
+const author = 2;
+*/
+enum Role { ADMIN, READ_ONLY, AUTHOR };
+
+const person = {
     name: 'JuanSbonora',
     age: 30,
     hobbies: ['Sports','Cooking'],
-    role: [2, 'admin']
+    role: Role.ADMIN
 };
+console.log(person);
 
-let favoriteActivities: string [];
-favoriteActivities = ['Karate'];
-
-console.log(person, favoriteActivities);
-
-for (let hobbies of person.hobbies) {
-    console.log(hobbies.toUpperCase());
+if(person.role === Role.ADMIN){
+    console.log('is Admin');
 }
-/*const product = {
-    id: '001',
-    price: 7.0,
-    tags: ['great-offter','hot-and-new'],
-    details:{
-        title: 'Red Carpet',
-        description: 'A great carpet - almost brand-new!'
-    }
-}
-console.log(person,product)*/
