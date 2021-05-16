@@ -1,16 +1,17 @@
-function combine(input1, input2, resultConversion) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
-        result = +input1 + +input2;
+var u1 = { name: 'Max', age: 30 };
+function greet(user) {
+    return ('Hi my name is ' + user.name);
+}
+function isOlder(user, checkAge) {
+    if (checkAge > user.age) {
+        console.log('is Older');
     }
     else {
-        result = input1.toString() + input2.toString();
+        console.log('is Young');
     }
-    return result;
+    return checkAge > user.age;
 }
-var combineAges = combine(15, 10, 'as-number');
-console.log(combineAges);
-var combinedStringAges = combine('15', '10', 'as-number');
-console.log(combinedStringAges);
-var combineNames = combine('Max', 'Ana', 'as-text');
-console.log(combineNames);
+var r1 = greet(u1);
+console.log(r1);
+var r2 = isOlder(u1, 15);
+console.log(r2);
