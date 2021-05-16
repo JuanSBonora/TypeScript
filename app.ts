@@ -1,13 +1,19 @@
-const person = {
+const person: {
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number,string];
+} = {
     name: 'JuanSbonora',
     age: 30,
-    hobbies: ['Sports','Cooking']
+    hobbies: ['Sports','Cooking'],
+    role: [2, 'admin']
 };
 
 let favoriteActivities: string [];
-favoriteActivities = ['Sports'];
+favoriteActivities = ['Karate'];
 
-console.log(person.name);
+console.log(person, favoriteActivities);
 
 for (let hobbies of person.hobbies) {
     console.log(hobbies.toUpperCase());

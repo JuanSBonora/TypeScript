@@ -1,11 +1,12 @@
 var person = {
     name: 'JuanSbonora',
     age: 30,
-    hobbies: ['Sports', 'Cooking']
+    hobbies: ['Sports', 'Cooking'],
+    role: [2, 'admin']
 };
 var favoriteActivities;
-favoriteActivities = ['Sports'];
-console.log(person.name);
+favoriteActivities = ['Karate'];
+console.log(person, favoriteActivities);
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
     var hobbies = _a[_i];
     console.log(hobbies.toUpperCase());
