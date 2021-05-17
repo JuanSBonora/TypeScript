@@ -3,7 +3,13 @@ function add(n1:number, n2:number){
 }
 
 function printResult(num: number){
-    console.log('Result: '+ num)
+    console.log('Result: '+ num);
 }
 
 printResult(add(5,6));
+
+let combineValues: (a: number, b:number) => number;
+
+combineValues = add;
+
+console.log(combineValues(15,5));
