@@ -1,25 +1,17 @@
-/* function add(n1:number, n2:number){
+function add(n1, n2) {
     return n1 + n2;
 }
-
-function printResult(num: number){
-    console.log('Result: '+ num);
+function printResult(num) {
+    console.log('Result: ' + num);
 }
-
-printResult(add(5,6));
-
-let combineValues: (a: number, b:number) => number;
-
-combineValues = add;
-
-console.log(combineValues(15,5)); */
-function add(n1, n2, n3) {
-    return n1 + n2 + n3;
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
 }
-function imprimirResultado(num) {
-    console.log('El resultado es: ' + num);
-}
-imprimirResultado(add(1, 2, 3));
+printResult(add(5, 6));
 var combineValues;
 combineValues = add;
-console.log(combineValues(3, 4, 5));
+console.log(combineValues(15, 5));
+addAndHandle(5, 10, function (result) {
+    console.log(result);
+});
